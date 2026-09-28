@@ -1,0 +1,150 @@
+/* =========================================================
+   PHASE 31.8.3 — DASHBOARD TITLE
+   FINAL COMPACT GOVERNMENT STYLE
+   ========================================================= */
+
+.dashboard-title {
+  width: 100%;
+  min-height: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 7px 10px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #dfe7ef;
+}
+
+/* =========================================================
+   TITLE CONTENT
+   ========================================================= */
+
+.dashboard-title__content {
+  width: 100%;
+  min-width: 0;
+}
+
+.dashboard-title__heading {
+  margin: 0;
+
+  color: #0b3769;
+
+  font-size: 19px;
+  font-weight: 800;
+
+  line-height: 1.15;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dashboard-title__subtitle {
+  margin: 3px 0 0;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: #5d7390;
+
+  font-size: 9px;
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+.dashboard-title__subtitle span {
+  color: #7c92aa;
+}
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .dashboard-title {
+    min-height: 56px;
+    height: 56px;
+
+    padding: 7px 10px;
+  }
+
+  .dashboard-title__heading {
+    font-size: 18px;
+  }
+
+  .dashboard-title__subtitle {
+    font-size: 9px;
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .dashboard-title {
+    min-height: 54px;
+    height: auto;
+
+    padding: 7px 9px;
+  }
+
+  .dashboard-title__heading {
+    font-size: 17px;
+
+    white-space: normal;
+  }
+
+  .dashboard-title__subtitle {
+    font-size: 9px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+  .dashboard-title {
+    min-height: 52px;
+
+    padding: 7px 8px;
+  }
+
+  .dashboard-title__heading {
+    font-size: 15px;
+    line-height: 1.2;
+  }
+
+  .dashboard-title__subtitle {
+    font-size: 8px;
+
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .dashboard-title {
+    min-height: 50px;
+  }
+
+  .dashboard-title__heading {
+    font-size: 14px;
+  }
+
+  .dashboard-title__subtitle {
+    font-size: 7px;
+  }
+}

@@ -1,0 +1,27 @@
+﻿scheme_code,subscheme_code,subscheme_desc
+1,1,Fatall Accident Relief(Accidental Death)
+2,1,Total Permanent Disability
+2,2,50% & above Partial Permanent
+2,3,26% to 49% Partial Permanent Disability
+2,4,Up to 25% Partial Permanent Disability
+3,1,Natural Death
+4,1,1st Maternity benefit for wife or self
+4,2,2nd  Maternity benefit for wife or self
+4,3,1st Maternity Benefit for First Daughter
+4,4,2nd  Maternity Benefit for First Daughter
+4,5,1st Maternity Benefit for Second Daughter
+4,6,2nd  Maternity Benefit for Second Daughter
+5,1,15 Days Recognition Of Prior Learning(R.P.L)
+6,1,15 Days Residential Skill Upgradation Training
+7,1,"Unemployed Girls,Widowed,Divorced and Desarted Daughters/Spouse"
+8,1,Unemployed Youth of dependents
+9,1,Marriage Gift for First Daughter
+9,2,Marriage Gift for Second Daughter
+9,3,Marriage Gift for unmarried women worker
+10,1,Setwin Online Training for Workers/Worker Dependents
+10,2,Setwin OFFLINE Training for Workers/Worker Dependents
+11,1,Setwin OFFLINE Training for Workers/Worker Dependents
+12,1,Loss of earning during medical treatment
+13,1,Sanction of Artifical Limbs
+15,1,APPC Online Training for Workers/Worker Dependents
+15,2,Acquiring of New Skills & Upgradation of existing Skills

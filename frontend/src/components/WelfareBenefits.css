@@ -1,0 +1,630 @@
+/* =========================================================
+   PHASE 31.7 — WORKER WELFARE BENEFITS
+   EXACT COMPACT REFERENCE STYLE
+   ========================================================= */
+
+.welfare-benefits-section {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.welfare-benefits-header {
+  position: relative;
+
+  z-index: 2;
+
+  margin-bottom: 7px;
+}
+
+.welfare-benefits-header h2 {
+  margin: 0;
+
+  color: #17375e;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+.welfare-benefits-header p {
+  margin: 2px 0 0;
+
+  color: #64748b;
+
+  font-size: 7px;
+
+  line-height: 1.2;
+}
+
+/* =========================================================
+   FOUR-CARD GRID
+   ========================================================= */
+
+.welfare-benefits-grid {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 7px;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   BENEFIT CARD
+   ========================================================= */
+
+.welfare-benefit-card {
+  position: relative;
+
+  min-width: 0;
+
+  width: 100%;
+
+  height: 78px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 8px 10px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dce5ef;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 2px 7px rgba(23, 55, 94, 0.05);
+}
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.welfare-benefit-icon {
+  width: 24px;
+  height: 24px;
+
+  min-width: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 3px;
+
+  border-radius: 6px;
+
+  font-size: 14px;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.welfare-benefit-content {
+  min-width: 0;
+}
+
+.welfare-benefit-content h3 {
+  margin: 0;
+
+  color: #17375e;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  line-height: 1.15;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.welfare-benefit-content p {
+  margin: 2px 0 0;
+
+  color: #64748b;
+
+  font-size: 6px;
+
+  line-height: 1.15;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   BLUE — SOCIAL SECURITY
+   ========================================================= */
+
+.welfare-benefit-blue {
+  border-top: 3px solid #1261b8;
+}
+
+.welfare-benefit-blue
+  .welfare-benefit-icon {
+  color: #1261b8;
+
+  background: #eef5ff;
+}
+
+/* =========================================================
+   GREEN — BETTER OPPORTUNITIES
+   ========================================================= */
+
+.welfare-benefit-green {
+  border-top: 3px solid #198754;
+}
+
+.welfare-benefit-green
+  .welfare-benefit-icon {
+  color: #198754;
+
+  background: #edf8f1;
+}
+
+/* =========================================================
+   ORANGE — SKILL DEVELOPMENT
+   ========================================================= */
+
+.welfare-benefit-orange {
+  border-top: 3px solid #e67e22;
+}
+
+.welfare-benefit-orange
+  .welfare-benefit-icon {
+  color: #e67e22;
+
+  background: #fff4e8;
+}
+
+/* =========================================================
+   RED — HEALTHY WORKERS
+   ========================================================= */
+
+.welfare-benefit-red {
+  border-top: 3px solid #dc3545;
+}
+
+.welfare-benefit-red
+  .welfare-benefit-icon {
+  color: #dc3545;
+
+  background: #fff0f2;
+}
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.welfare-benefit-card {
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.welfare-benefit-card:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 4px 10px rgba(23, 55, 94, 0.09);
+}
+
+/* =========================================================
+   CONSTRUCTION WORKER DECORATION
+   ========================================================= */
+
+.welfare-benefits-decoration {
+  position: absolute;
+
+  right: 4px;
+  bottom: 0;
+
+  width: 185px;
+  height: 70px;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  opacity: 0.18;
+
+  overflow: hidden;
+}
+
+.welfare-benefits-decoration img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: right center;
+
+  border-radius: 8px;
+}
+
+/* Keep the content above the decoration */
+
+.welfare-benefits-header,
+.welfare-benefits-grid {
+  position: relative;
+
+  z-index: 2;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .welfare-benefits-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .welfare-benefit-card {
+    height: 82px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .welfare-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .welfare-benefit-card {
+    height: 78px;
+
+    padding: 8px;
+  }
+
+  .welfare-benefits-decoration {
+    width: 150px;
+    height: 60px;
+
+    opacity: 0.12;
+  }
+}
+/* =========================================================
+   PHASE 31.7 — FINAL WELFARE BENEFITS POLISH
+   ========================================================= */
+
+.welfare-benefit-card {
+  height: 82px;
+  padding: 9px 11px;
+}
+
+.welfare-benefit-icon {
+  width: 27px;
+  height: 27px;
+
+  margin-bottom: 4px;
+
+  border-radius: 6px;
+
+  font-size: 16px;
+}
+
+.welfare-benefit-content h3 {
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+.welfare-benefit-content p {
+  margin-top: 2px;
+
+  font-size: 8px;
+  line-height: 1.2;
+}
+
+/* Make the construction decoration visible */
+.welfare-benefits-decoration {
+  right: 0;
+  bottom: 0;
+
+  width: 230px;
+  height: 78px;
+
+  z-index: 3;
+
+  opacity: 0.20;
+
+  pointer-events: none;
+}
+
+.welfare-benefits-decoration img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: right center;
+}
+
+/* Keep card content above the decoration */
+.welfare-benefit-card {
+  position: relative;
+  z-index: 2;
+}
+
+.welfare-benefit-card .welfare-benefit-icon,
+.welfare-benefit-card .welfare-benefit-content {
+  position: relative;
+  z-index: 4;
+}
+
+/* Let the rightmost card show the decoration */
+.welfare-benefit-card:last-child {
+  background: rgba(255, 255, 255, 0.82);
+}
+/* =========================================================
+   PHASE 31.14 — WELFARE CARD DIMENSIONS
+   ========================================================= */
+
+.welfare-benefits-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 7px;
+  box-sizing: border-box;
+}
+
+.welfare-benefit-card {
+  width: 100%;
+  min-width: 0;
+  height: 78px;
+  min-height: 78px;
+
+  padding: 8px 10px;
+  box-sizing: border-box;
+
+  border-radius: 7px;
+  overflow: hidden;
+}
+/* =========================================================
+   PHASE 31.14 — WELFARE CARD COLOR MATCH
+   ========================================================= */
+
+.welfare-benefit-blue {
+  border-top: 3px solid #1261b8;
+  background: #ffffff;
+}
+
+.welfare-benefit-blue .welfare-benefit-icon {
+  color: #1261b8;
+  background: #eef5ff;
+}
+
+.welfare-benefit-green {
+  border-top: 3px solid #198754;
+  background: #ffffff;
+}
+
+.welfare-benefit-green .welfare-benefit-icon {
+  color: #198754;
+  background: #edf8f1;
+}
+
+.welfare-benefit-orange {
+  border-top: 3px solid #e67e22;
+  background: #ffffff;
+}
+
+.welfare-benefit-orange .welfare-benefit-icon {
+  color: #e67e22;
+  background: #fff4e8;
+}
+
+.welfare-benefit-red {
+  border-top: 3px solid #dc3545;
+  background: #ffffff;
+}
+
+.welfare-benefit-red .welfare-benefit-icon {
+  color: #dc3545;
+  background: #fff0f2;
+}
+/* =========================================================
+   PHASE 31.14 — WELFARE CARD ICON MATCH
+   ========================================================= */
+
+.welfare-benefit-icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 3px;
+
+  border-radius: 6px;
+
+  font-size: 14px;
+  line-height: 1;
+
+  flex-shrink: 0;
+}
+/* =========================================================
+   PHASE 31.14 — WELFARE CARD TYPOGRAPHY
+   ========================================================= */
+
+.welfare-benefit-content {
+  min-width: 0;
+}
+
+.welfare-benefit-content h3 {
+  margin: 0;
+
+  color: #17375e;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  line-height: 1.15;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.welfare-benefit-content p {
+  margin: 2px 0 0;
+
+  color: #64748b;
+
+  font-size: 6px;
+  font-weight: 500;
+
+  line-height: 1.15;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* =========================================================
+   PHASE 31.14 — WELFARE SECTION HEADING MATCH
+   ========================================================= */
+
+.welfare-benefits-header {
+  width: 100%;
+  margin: 0 0 7px;
+  padding: 0;
+}
+
+.welfare-benefits-header h2 {
+  margin: 0;
+
+  color: #17375e;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+.welfare-benefits-header p {
+  margin: 2px 0 0;
+
+  color: #64748b;
+
+  font-size: 7px;
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+/* =========================================================
+   PHASE 31.14 — WELFARE DECORATION MATCH
+   ========================================================= */
+
+.welfare-benefits-decoration {
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  width: 185px;
+  height: 70px;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  opacity: 0.16;
+
+  overflow: hidden;
+}
+
+.welfare-benefits-decoration img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: right center;
+
+  border-radius: 8px;
+}
+/* =========================================================
+   PHASE 31.14 — WELFARE CARD INTERNAL ALIGNMENT
+   ========================================================= */
+
+.welfare-benefit-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 8px 10px;
+  box-sizing: border-box;
+}
+
+.welfare-benefit-icon {
+  flex-shrink: 0;
+  margin: 0 0 3px;
+}
+
+.welfare-benefit-content {
+  width: 100%;
+  min-width: 0;
+}
+
+.welfare-benefit-content h3,
+.welfare-benefit-content p {
+  text-align: left;
+}
+/* =========================================================
+   PHASE 31.14 — WELFARE CARD BORDER + SHADOW
+   ========================================================= */
+
+.welfare-benefit-card {
+  border: 1px solid #dce5ef;
+  border-radius: 7px;
+  background: #ffffff;
+
+  box-shadow: 0 2px 7px rgba(23, 55, 94, 0.05);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.welfare-benefit-card:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 4px 10px rgba(23, 55, 94, 0.09);
+}

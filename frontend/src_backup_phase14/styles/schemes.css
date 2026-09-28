@@ -1,0 +1,18 @@
+.scheme-chart {
+  width: 100%;
+  min-height: 360px;
+}
+
+.scheme-chart .recharts-responsive-container {
+  min-height: 360px;
+}
+
+@media (max-width: 768px) {
+  .scheme-chart {
+    min-height: 300px;
+  }
+
+  .scheme-chart .recharts-responsive-container {
+    min-height: 300px;
+  }
+}

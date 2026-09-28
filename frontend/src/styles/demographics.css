@@ -1,0 +1,229 @@
+/* =========================================================
+   PHASE 31.5.1 — WORKER DEMOGRAPHICS
+   FULLY VISIBLE COMPACT DONUT
+   ========================================================= */
+
+.worker-demographics-section {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.demographics-reference-card {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  border-radius: 0;
+
+  background: transparent;
+  box-shadow: none;
+
+  box-sizing: border-box;
+}
+
+.demographics-reference-card
+  .dashboard-card__header {
+  margin: 0 0 2px;
+  padding: 0;
+}
+
+.demographics-reference-card
+  .dashboard-card__title {
+  margin: 0;
+
+  color: #123c69;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+.demographics-reference-card
+  .dashboard-card__subtitle {
+  margin: 2px 0 0;
+
+  color: #6b8097;
+
+  font-size: 7px;
+  line-height: 1.2;
+}
+
+/* =========================================================
+   CHART AREA
+   ========================================================= */
+
+.demographics-chart {
+  width: 100%;
+  height: 126px;
+  min-height: 126px;
+
+  display: grid;
+
+  grid-template-columns: 56% 44%;
+
+  align-items: center;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   DONUT
+   ========================================================= */
+
+.gender-donut-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 118px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: visible;
+}
+
+.gender-donut-center {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  pointer-events: none;
+}
+
+.gender-donut-center strong {
+  color: #102f52;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+.gender-donut-center span {
+  margin-top: 2px;
+
+  color: #6b8097;
+
+  font-size: 6px;
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   LEGEND
+   ========================================================= */
+
+.gender-legend {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding-right: 2px;
+
+  box-sizing: border-box;
+}
+
+.gender-legend__item {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  font-size: 7px;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+.gender-legend__dot {
+  width: 7px;
+  height: 7px;
+
+  flex: 0 0 7px;
+
+  border-radius: 50%;
+}
+
+.gender-legend__name {
+  color: #173e66;
+  font-weight: 700;
+}
+
+.gender-legend__value {
+  margin-left: 2px;
+
+  color: #637b93;
+  font-weight: 500;
+}
+
+/* =========================================================
+   API STATES
+   ========================================================= */
+
+.demographics-chart
+  .api-loading-state,
+.demographics-chart
+  .api-error-state,
+.demographics-chart
+  .api-empty-state {
+  grid-column: 1 / -1;
+
+  width: 100%;
+  height: 118px;
+  min-height: 118px;
+
+  font-size: 8px;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .demographics-chart {
+    height: auto;
+    min-height: 135px;
+  }
+
+  .gender-donut-wrapper {
+    height: 125px;
+  }
+}
+
+@media (max-width: 520px) {
+  .demographics-chart {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .gender-donut-wrapper {
+    height: 120px;
+  }
+
+  .gender-legend {
+    padding: 0 8px 5px;
+  }
+}

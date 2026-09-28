@@ -1,0 +1,918 @@
+/* =========================================================
+   PHASE 31.6.1 — EXACT RECENT APPLICATIONS
+   COMPACT GOVERNMENT PORTAL STYLE
+   ========================================================= */
+
+.dashboard-section {
+  min-width: 0;
+}
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.dashboard-section:has(.applications-table) {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.dashboard-section:has(.applications-table)
+  > .dashboard-card {
+  width: 100%;
+  height: 190px;
+
+  padding: 7px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe7ef;
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 2px 7px rgba(20, 55, 95, 0.05);
+}
+
+/* =========================================================
+   TABLE WRAPPER
+   ========================================================= */
+
+.applications-table-wrapper {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.applications-table {
+  width: 100%;
+
+  min-width: 0;
+
+  table-layout: fixed;
+
+  border-collapse: collapse;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   TABLE CELLS
+   ========================================================= */
+
+.applications-table th,
+.applications-table td {
+  padding: 5px 6px;
+
+  text-align: left;
+
+  border-bottom: 1px solid #e4ebf2;
+
+  font-size: 7px;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   TABLE HEADER
+   ========================================================= */
+
+.applications-table th {
+  height: 25px;
+
+  color: #36536f;
+
+  background: #f1f6fb;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  line-height: 1.1;
+}
+
+/* =========================================================
+   TABLE BODY
+   ========================================================= */
+
+.applications-table td {
+  height: 26px;
+
+  color: #1d3d5f;
+}
+
+.applications-table tbody tr {
+  transition:
+    background 0.15s ease;
+}
+
+.applications-table tbody tr:hover {
+  background: #f7fbff;
+}
+
+.applications-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================================
+   COLUMN WIDTHS
+   ========================================================= */
+
+/* Application number */
+.applications-table th:nth-child(1),
+.applications-table td:nth-child(1) {
+  width: 22%;
+}
+
+/* Worker */
+.applications-table th:nth-child(2),
+.applications-table td:nth-child(2) {
+  width: 18%;
+}
+
+/* Welfare scheme */
+.applications-table th:nth-child(3),
+.applications-table td:nth-child(3) {
+  width: 24%;
+}
+
+/* Date */
+.applications-table th:nth-child(4),
+.applications-table td:nth-child(4) {
+  width: 15%;
+}
+
+/* Status */
+.applications-table th:nth-child(5),
+.applications-table td:nth-child(5) {
+  width: 13%;
+}
+
+/* View */
+.applications-table th:nth-child(6),
+.applications-table td:nth-child(6) {
+  width: 8%;
+  text-align: center;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.application-status {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 32px;
+  height: 16px;
+
+  padding: 0 5px;
+
+  box-sizing: border-box;
+
+  border-radius: 999px;
+
+  background: #dcf5e7;
+
+  color: #198754;
+
+  font-size: 6px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   VIEW BUTTON
+   ========================================================= */
+
+.application-view-button {
+  width: 18px;
+  height: 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid #dbe5ee;
+  border-radius: 4px;
+
+  background: #f7fafc;
+
+  color: #0b63ce;
+
+  font-size: 8px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.application-view-button:hover {
+  background: #eaf3ff;
+  border-color: #0b63ce;
+}
+
+/* =========================================================
+   VIEW ALL
+   ========================================================= */
+
+.applications-view-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 25px;
+
+  margin: 0;
+}
+
+.applications-view-all-button {
+  padding: 4px 11px;
+
+  border: 1px solid #0b63ce;
+  border-radius: 4px;
+
+  background: #ffffff;
+
+  color: #0b63ce;
+
+  font-family: inherit;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.applications-view-all-button:hover {
+  background: #0b63ce;
+  color: #ffffff;
+}
+
+/* =========================================================
+   LOADING / ERROR / EMPTY
+   ========================================================= */
+
+.applications-table-wrapper
+  .api-loading-state,
+.applications-table-wrapper
+  .api-error-state,
+.applications-table-wrapper
+  .api-empty-state {
+  width: 100%;
+  height: 162px;
+  min-height: 162px;
+
+  padding: 12px;
+
+  box-sizing: border-box;
+
+  font-size: 8px;
+}
+
+/* =========================================================
+   APPLICATION DETAILS OVERLAY
+   ========================================================= */
+
+.application-details-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 99999;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  padding: 16px;
+
+  box-sizing: border-box;
+
+  background: rgba(15, 23, 42, 0.55);
+
+  overflow: hidden;
+}
+
+.application-details-overlay * {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   DETAILS PANEL
+   ========================================================= */
+
+.application-details-panel {
+  position: relative;
+
+  width: min(560px, calc(100vw - 32px));
+  max-width: 560px;
+
+  max-height: calc(100vh - 32px);
+
+  margin: 0 auto;
+
+  overflow-y: auto;
+
+  padding: 15px;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe3ec;
+  border-radius: 8px;
+
+  box-shadow:
+    0 18px 45px rgba(15, 23, 42, 0.28);
+
+  isolation: isolate;
+}
+
+/* =========================================================
+   DETAILS HEADER
+   ========================================================= */
+
+.application-details-header {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding-bottom: 10px;
+
+  margin-bottom: 10px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.application-details-header h3 {
+  margin: 0;
+
+  color: #17375e;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.application-details-header p {
+  margin: 3px 0 0;
+
+  color: #64748b;
+
+  font-size: 8px;
+}
+
+/* =========================================================
+   CLOSE BUTTON
+   ========================================================= */
+
+.application-details-close {
+  width: 25px;
+  height: 25px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background: #f1f5f9;
+
+  color: #475569;
+
+  font-size: 16px;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.application-details-close:hover {
+  background: #e2e8f0;
+}
+
+/* =========================================================
+   DETAILS GRID
+   ========================================================= */
+
+.application-details-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 8px;
+}
+
+.application-detail {
+  min-width: 0;
+
+  padding: 8px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 6px;
+
+  background: #f8fafc;
+}
+
+.application-detail span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #64748b;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.application-detail strong {
+  display: block;
+
+  color: #17375e;
+
+  font-size: 8px;
+
+  line-height: 1.35;
+
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   VIEW ALL PANEL
+   ========================================================= */
+
+.applications-all-panel {
+  position: relative;
+
+  width: min(900px, calc(100vw - 32px));
+  max-width: 900px;
+
+  max-height: calc(100vh - 32px);
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  padding: 15px;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe3ec;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 18px 45px rgba(15, 23, 42, 0.28);
+
+  isolation: isolate;
+}
+
+/* =========================================================
+   VIEW ALL TABLE
+   ========================================================= */
+
+.applications-all-table-wrapper {
+  width: 100%;
+
+  max-height: 60vh;
+
+  overflow-x: auto;
+  overflow-y: auto;
+
+  border-radius: 5px;
+}
+
+.applications-all-table-wrapper
+  .applications-table {
+  min-width: 620px;
+}
+
+.applications-all-table-wrapper
+  thead th {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 2;
+
+  background: #f1f5f9;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .dashboard-section:has(.applications-table)
+    > .dashboard-card {
+    height: auto;
+    min-height: 190px;
+  }
+
+  .applications-table {
+    min-width: 620px;
+  }
+
+  .application-details-overlay {
+    padding: 10px;
+  }
+
+  .application-details-panel,
+  .applications-all-panel {
+    width: 100%;
+    max-width: 100%;
+
+    max-height: calc(100vh - 20px);
+
+    padding: 13px;
+  }
+
+  .application-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .applications-all-table-wrapper {
+    max-height: 65vh;
+  }
+}
+/* =========================================================
+   PHASE 31.6.1 — FINAL TABLE READABILITY
+   ========================================================= */
+
+.applications-table th,
+.applications-table td {
+  font-size: 8px;
+  line-height: 1.25;
+}
+
+.applications-table th {
+  height: 27px;
+  font-size: 8px;
+}
+
+.applications-table td {
+  height: 28px;
+}
+
+.application-status {
+  min-width: 34px;
+  height: 17px;
+
+  padding: 0 6px;
+
+  font-size: 7px;
+}
+
+.application-view-button {
+  width: 20px;
+  height: 20px;
+
+  font-size: 9px;
+}
+
+.applications-view-all {
+  height: 23px;
+}
+
+.applications-view-all-button {
+  padding: 4px 12px;
+  font-size: 8px;
+}
+/* =========================================================
+   PHASE 31.6.1 — REFERENCE TABLE COLUMNS
+   ========================================================= */
+
+.applications-table th:nth-child(1),
+.applications-table td:nth-child(1) {
+  width: 22%;
+}
+
+.applications-table th:nth-child(2),
+.applications-table td:nth-child(2) {
+  width: 30%;
+}
+
+.applications-table th:nth-child(3),
+.applications-table td:nth-child(3) {
+  width: 20%;
+}
+
+.applications-table th:nth-child(4),
+.applications-table td:nth-child(4) {
+  width: 18%;
+}
+
+.applications-table th:nth-child(5),
+.applications-table td:nth-child(5) {
+  width: 10%;
+  text-align: center;
+}
+/* =========================================================
+   PHASE 31.10 — SECTION HEADING + VIEW ALL
+   ========================================================= */
+
+.applications-section-header {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 8px;
+
+  margin: 0 0 6px;
+}
+
+.applications-section-heading {
+  min-width: 0;
+  flex: 1;
+}
+
+.applications-section-heading .dashboard-section__title {
+  margin: 0;
+
+  color: #17375e;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+.applications-section-heading .dashboard-section__subtitle {
+  margin: 2px 0 0;
+
+  color: #64748b;
+
+  font-size: 7px;
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+.applications-view-all-button--header {
+  flex: 0 0 auto;
+
+  margin-top: 0;
+
+  padding: 4px 10px;
+
+  border: 1px solid #0b63ce;
+  border-radius: 4px;
+
+  background: #ffffff;
+
+  color: #0b63ce;
+
+  font-family: inherit;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.applications-view-all-button--header:hover {
+  background: #0b63ce;
+  color: #ffffff;
+}
+/* =========================================================
+   PHASE 31.10 — TABLE HEADER REFERENCE MATCH
+   ========================================================= */
+
+.applications-table thead {
+  width: 100%;
+}
+
+.applications-table thead tr {
+  height: 25px;
+}
+
+.applications-table th {
+  height: 25px;
+
+  padding: 5px 6px;
+
+  background: #f3f7fb;
+
+  color: #36536f;
+
+  border-bottom: 1px solid #dbe5ee;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  text-align: left;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Keep View column centered */
+.applications-table th:nth-child(5) {
+  text-align: center;
+}
+/* =========================================================
+   PHASE 31.10 — COLUMN WIDTHS + ALIGNMENT
+   ========================================================= */
+
+.applications-table th:nth-child(1),
+.applications-table td:nth-child(1) {
+  width: 22%;
+  text-align: left;
+}
+
+.applications-table th:nth-child(2),
+.applications-table td:nth-child(2) {
+  width: 30%;
+  text-align: left;
+}
+
+.applications-table th:nth-child(3),
+.applications-table td:nth-child(3) {
+  width: 20%;
+  text-align: center;
+}
+
+.applications-table th:nth-child(4),
+.applications-table td:nth-child(4) {
+  width: 18%;
+  text-align: center;
+}
+
+.applications-table th:nth-child(5),
+.applications-table td:nth-child(5) {
+  width: 10%;
+  text-align: center;
+}
+/* =========================================================
+   PHASE 31.10 — ROW HEIGHT + TYPOGRAPHY
+   ========================================================= */
+
+.applications-table tbody tr {
+  height: 27px;
+}
+
+.applications-table tbody td {
+  height: 27px;
+
+  padding: 4px 6px;
+
+  color: #1d3d5f;
+
+  font-size: 7px;
+  font-weight: 500;
+
+  line-height: 1.15;
+
+  vertical-align: middle;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.applications-table tbody td:nth-child(1) {
+  font-weight: 600;
+}
+
+.applications-table tbody td:nth-child(2) {
+  font-weight: 600;
+}
+
+.applications-table tbody td:nth-child(3),
+.applications-table tbody td:nth-child(4),
+.applications-table tbody td:nth-child(5) {
+  font-weight: 500;
+}
+/* =========================================================
+   PHASE 31.10 — STATUS BADGE REFERENCE MATCH
+   ========================================================= */
+
+.applications-table .application-status {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 34px;
+  height: 17px;
+
+  padding: 0 7px;
+
+  box-sizing: border-box;
+
+  border-radius: 999px;
+
+  background: #dcf5e7;
+
+  color: #198754;
+
+  font-size: 6px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  text-align: center;
+}
+/* =========================================================
+   PHASE 31.10 — VIEW BUTTON REFERENCE MATCH
+   ========================================================= */
+
+.applications-table .application-view-button {
+  width: 20px;
+  height: 20px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid #dbe5ee;
+  border-radius: 4px;
+
+  background: #f7fafc;
+  color: #0b63ce;
+
+  font-size: 9px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.applications-table .application-view-button:hover {
+  background: #eaf3ff;
+  border-color: #0b63ce;
+}
+
+.applications-table .application-view-button:active {
+  transform: scale(0.96);
+}
+
+.applications-table .application-view-button:focus-visible {
+  outline: 2px solid rgba(11, 99, 206, 0.25);
+  outline-offset: 1px;
+}

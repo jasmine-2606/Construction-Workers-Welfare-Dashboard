@@ -1,0 +1,451 @@
+/* =========================================================
+   PHASE 31.9 — DISTRICT ANALYTICS
+   COMPACT + READABLE REFERENCE STYLE
+   ========================================================= */
+
+.district-analytics-section {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/* =========================================================
+   REFERENCE CARD
+   ========================================================= */
+
+.district-reference-card {
+  width: 100%;
+  height: 174px;
+  min-height: 174px;
+
+  padding: 7px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe7ef;
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   MAP + TOP DISTRICTS
+   ========================================================= */
+
+.district-reference-layout {
+  width: 100%;
+  height: 154px;
+
+  display: grid;
+
+  grid-template-columns: 57% 43%;
+
+  gap: 8px;
+
+  align-items: stretch;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   MAP SIDE
+   ========================================================= */
+
+.district-reference-map {
+  min-width: 0;
+  width: 100%;
+  height: 154px;
+
+  overflow: hidden;
+}
+
+.district-reference-map .telangana-map {
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================================================
+   TOP DISTRICTS SIDE
+   ========================================================= */
+
+.district-reference-top {
+  min-width: 0;
+  width: 100%;
+  height: 154px;
+
+  overflow: hidden;
+}
+
+.district-reference-top .top-districts-card {
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 3px 4px;
+
+  box-sizing: border-box;
+
+  border: none;
+  border-radius: 0;
+
+  background: transparent;
+
+  box-shadow: none;
+}
+
+/* =========================================================
+   TOP DISTRICTS HEADER
+   ========================================================= */
+
+.district-reference-top .top-districts-card__header {
+  margin: 0 0 3px;
+}
+
+.district-reference-top .top-districts-card__header h3 {
+  margin: 0;
+
+  color: #17375e;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+.district-reference-top .top-districts-card__header p {
+  margin: 2px 0 0;
+
+  color: #64748b;
+
+  font-size: 7.5px;
+  font-weight: 500;
+
+  line-height: 1.15;
+}
+
+/* =========================================================
+   TOP DISTRICT LIST
+   ========================================================= */
+
+.district-reference-top .top-districts-list {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+/* =========================================================
+   DISTRICT ROW
+   ========================================================= */
+
+.district-reference-top .top-district-item {
+  width: 100%;
+  min-height: 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 2px 4px;
+
+  box-sizing: border-box;
+
+  border-radius: 4px;
+
+  background: #f4f8fc;
+}
+
+/* =========================================================
+   RANK
+   ========================================================= */
+
+.district-reference-top .top-district-rank {
+  width: 16px;
+  height: 16px;
+
+  min-width: 16px;
+
+  flex: 0 0 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0b63ce;
+  color: #ffffff;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   DISTRICT INFORMATION
+   ========================================================= */
+
+.district-reference-top .top-district-info {
+  min-width: 0;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1px;
+}
+
+.district-reference-top .top-district-name {
+  color: #1e293b;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.district-reference-top .top-district-workers {
+  color: #64748b;
+
+  font-size: 6px;
+  font-weight: 500;
+
+  line-height: 1.1;
+}
+
+/* =========================================================
+   API LOADING
+   ========================================================= */
+
+.district-reference-card .api-loading-state {
+  width: 100%;
+  height: 100%;
+  min-height: 150px;
+
+  font-size: 8px;
+}
+
+/* =========================================================
+   API ERROR
+   ========================================================= */
+
+.district-reference-card .api-error-state {
+  width: 100%;
+  height: 100%;
+  min-height: 150px;
+
+  font-size: 8px;
+}
+
+/* =========================================================
+   API EMPTY
+   ========================================================= */
+
+.district-reference-card .api-empty-state {
+  width: 100%;
+  height: 100%;
+  min-height: 150px;
+
+  font-size: 8px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .district-reference-card {
+    height: auto;
+    min-height: 320px;
+  }
+
+  .district-reference-layout {
+    height: auto;
+
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+  .district-reference-map,
+  .district-reference-top {
+    height: 150px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+  .district-reference-card {
+    min-height: 300px;
+
+    padding: 6px;
+  }
+
+  .district-reference-layout {
+    gap: 6px;
+  }
+
+  .district-reference-map,
+  .district-reference-top {
+    height: 140px;
+  }
+
+  .district-reference-top .top-district-name {
+    font-size: 8px;
+  }
+
+  .district-reference-top .top-district-workers {
+    font-size: 6px;
+  }
+}
+
+/* =========================================================
+   PHASE 31.9 — TOP DISTRICTS REFERENCE MATCH
+   Final overrides for Phase 31.9
+   ========================================================= */
+
+.district-reference-top {
+  min-width: 0;
+  width: 100%;
+  height: 154px;
+
+  overflow: hidden;
+}
+
+.district-reference-top .top-districts-card {
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 3px 4px;
+
+  box-sizing: border-box;
+
+  border: none;
+  border-radius: 0;
+
+  background: transparent;
+
+  box-shadow: none;
+}
+
+.district-reference-top .top-districts-card__header {
+  margin: 0 0 4px;
+}
+
+.district-reference-top .top-districts-card__header h3 {
+  margin: 0;
+
+  color: #17375e;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  line-height: 1.15;
+}
+
+.district-reference-top .top-districts-card__header p {
+  margin: 2px 0 0;
+
+  color: #64748b;
+
+  font-size: 6px;
+  font-weight: 500;
+
+  line-height: 1.15;
+}
+
+.district-reference-top .top-districts-list {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.district-reference-top .top-district-item {
+  width: 100%;
+  min-height: 21px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 2px 4px;
+
+  box-sizing: border-box;
+
+  border-radius: 4px;
+
+  background: #f4f8fc;
+}
+
+.district-reference-top .top-district-rank {
+  width: 17px;
+  height: 17px;
+
+  min-width: 17px;
+
+  flex: 0 0 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0b63ce;
+  color: #ffffff;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+.district-reference-top .top-district-info {
+  min-width: 0;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1px;
+}
+
+.district-reference-top .top-district-name {
+  color: #1e293b;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.district-reference-top .top-district-workers {
+  color: #64748b;
+
+  font-size: 6px;
+  font-weight: 500;
+
+  line-height: 1.05;
+}

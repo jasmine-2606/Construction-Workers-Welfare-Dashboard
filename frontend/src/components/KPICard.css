@@ -1,0 +1,319 @@
+/* =========================================================
+   PHASE 31.8.3 — FINAL KPI CARD PROPORTIONS
+   ========================================================= */
+
+.kpi-card {
+  width: 100%;
+  min-width: 0;
+  height: 82px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 8px 10px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(20, 70, 120, 0.07);
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 2px 8px rgba(20, 55, 95, 0.06);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 4px 12px rgba(20, 55, 95, 0.09);
+}
+
+/* =========================================================
+   TOP / ICON
+   ========================================================= */
+
+.kpi-card__top {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  min-height: 0;
+}
+
+.kpi-card__icon {
+  width: 30px;
+  height: 30px;
+
+  min-width: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   VALUE
+   ========================================================= */
+
+.kpi-card__value {
+  margin-top: 2px;
+
+  font-size: 21px;
+  font-weight: 800;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.kpi-card__title {
+  margin-top: 3px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  color: #153b62;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.kpi-card__subtitle {
+  margin-top: 2px;
+
+  color: #70849a;
+
+  font-size: 8px;
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   CHANGE
+   ========================================================= */
+
+.kpi-card__change {
+  margin-top: 3px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 2px;
+
+  width: fit-content;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+.kpi-card__change--positive {
+  color: #15965b;
+}
+
+.kpi-card__change--negative {
+  color: #e3384b;
+}
+
+/* =========================================================
+   BLUE
+   ========================================================= */
+
+.kpi-card--blue {
+  background: #eef8ff;
+}
+
+.kpi-card--blue .kpi-card__icon {
+  background: #d7edff;
+  color: #1475d1;
+}
+
+.kpi-card--blue .kpi-card__value {
+  color: #1268d4;
+}
+
+/* =========================================================
+   PURPLE
+   ========================================================= */
+
+.kpi-card--purple {
+  background: #f2edff;
+}
+
+.kpi-card--purple .kpi-card__icon {
+  background: #e3d9ff;
+  color: #7045d8;
+}
+
+.kpi-card--purple .kpi-card__value {
+  color: #7045d8;
+}
+
+/* =========================================================
+   GREEN
+   ========================================================= */
+
+.kpi-card--green {
+  background: #ebfaf1;
+}
+
+.kpi-card--green .kpi-card__icon {
+  background: #d7f3e3;
+  color: #1b9b5e;
+}
+
+.kpi-card--green .kpi-card__value {
+  color: #188f56;
+}
+
+/* =========================================================
+   ORANGE
+   ========================================================= */
+
+.kpi-card--orange {
+  background: #fff5e8;
+}
+
+.kpi-card--orange .kpi-card__icon {
+  background: #ffe7c4;
+  color: #ef8b1f;
+}
+
+.kpi-card--orange .kpi-card__value {
+  color: #e9831a;
+}
+
+/* =========================================================
+   RED / PINK
+   ========================================================= */
+
+.kpi-card--red {
+  background: #fff0f4;
+}
+
+.kpi-card--red .kpi-card__icon {
+  background: #ffdbe6;
+  color: #e83c6f;
+}
+
+.kpi-card--red .kpi-card__value {
+  color: #df315f;
+}
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .kpi-card {
+    height: 80px;
+
+    padding: 8px 9px;
+  }
+
+  .kpi-card__icon {
+    width: 29px;
+    height: 29px;
+
+    min-width: 29px;
+
+    font-size: 14px;
+  }
+
+  .kpi-card__value {
+    font-size: 20px;
+  }
+
+  .kpi-card__title {
+    font-size: 9px;
+  }
+
+  .kpi-card__subtitle {
+    font-size: 7.5px;
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .kpi-card {
+    height: 78px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+  .kpi-card {
+    height: 76px;
+
+    padding: 8px;
+  }
+
+  .kpi-card__icon {
+    width: 28px;
+    height: 28px;
+
+    min-width: 28px;
+
+    font-size: 14px;
+  }
+
+  .kpi-card__value {
+    font-size: 19px;
+  }
+
+  .kpi-card__title {
+    font-size: 9px;
+  }
+
+  .kpi-card__subtitle {
+    font-size: 7px;
+  }
+
+  .kpi-card__change {
+    font-size: 7px;
+  }
+}

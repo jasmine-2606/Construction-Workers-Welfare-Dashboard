@@ -1,0 +1,1243 @@
+/* =========================================================
+   PHASE 31.6.2 — FIND A SCHEME
+   FINAL COMPACT + FULLY VISIBLE VERSION
+   ========================================================= */
+
+#find-scheme {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.find-scheme-card {
+  width: 100%;
+  height: 210px;
+  min-height: 210px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px;
+
+  gap: 10px;
+
+  padding: 9px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe7ef;
+  border-radius: 8px;
+
+  box-shadow:
+    0 2px 7px rgba(20, 55, 95, 0.05);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.find-scheme-content {
+  min-width: 0;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: thin;
+  scrollbar-color: #c7d6e5 transparent;
+}
+
+.find-scheme-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.find-scheme-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.find-scheme-content::-webkit-scrollbar-thumb {
+  background: #c7d6e5;
+  border-radius: 999px;
+}
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.find-scheme-intro {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 6px;
+}
+
+.find-scheme-intro__icon {
+  width: 32px;
+  height: 32px;
+
+  min-width: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eaf3ff;
+
+  font-size: 17px;
+}
+
+.find-scheme-intro h3 {
+  margin: 0;
+
+  color: #17375e;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  line-height: 1.15;
+}
+
+.find-scheme-intro p {
+  margin: 2px 0 0;
+
+  color: #64748b;
+
+  font-size: 7px;
+
+  line-height: 1.2;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.find-scheme-form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.find-scheme-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.find-scheme-field label {
+  color: #475569;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  line-height: 1.1;
+}
+
+.find-scheme-field select {
+  width: 100%;
+  height: 28px;
+
+  padding: 0 7px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d8e2ec;
+  border-radius: 5px;
+
+  background: #ffffff;
+  color: #17375e;
+
+  font-family: inherit;
+
+  font-size: 7px;
+  font-weight: 500;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.find-scheme-field select:focus {
+  border-color: #0b63ce;
+
+  box-shadow:
+    0 0 0 2px rgba(11, 99, 206, 0.08);
+}
+
+/* =========================================================
+   FIND BUTTON
+   ========================================================= */
+
+.find-scheme-button {
+  width: 100%;
+  height: 29px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  margin-top: 2px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 5px;
+
+  background: #0b63ce;
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.find-scheme-button:hover {
+  background: #084f9f;
+  transform: translateY(-1px);
+}
+
+.find-scheme-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.find-scheme-button span {
+  font-size: 11px;
+  line-height: 1;
+}
+
+/* =========================================================
+   API COUNT
+   ========================================================= */
+
+.find-scheme-api-count {
+  margin-top: 3px;
+
+  color: #198754;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  line-height: 1.1;
+}
+
+/* =========================================================
+   API STATES
+   ========================================================= */
+
+.find-scheme-content
+  .api-loading-state,
+.find-scheme-content
+  .api-error-state,
+.find-scheme-content
+  .api-empty-state {
+  min-height: 34px;
+
+  margin-top: 3px;
+  padding: 6px;
+
+  box-sizing: border-box;
+
+  border-radius: 5px;
+
+  font-size: 7px;
+}
+
+/* =========================================================
+   WORKER ILLUSTRATION
+   ========================================================= */
+
+.find-scheme-illustration {
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px;
+
+  box-sizing: border-box;
+
+  border-radius: 7px;
+
+  background: #f4f8fd;
+
+  border: 1px solid #dfe7ef;
+
+  overflow: hidden;
+}
+
+.find-scheme-illustration__image {
+  width: 108px;
+  height: 125px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 4px;
+
+  border-radius: 9px;
+
+  background: #eaf3ff;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 5px 12px rgba(11, 99, 206, 0.07);
+}
+
+.find-scheme-illustration__image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.find-scheme-illustration span {
+  color: #17375e;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  line-height: 1.1;
+}
+
+/* =========================================================
+   SEARCH SUMMARY
+   ========================================================= */
+
+.find-scheme-search-summary {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 4px 7px;
+
+  margin-top: 4px;
+  padding: 5px 6px;
+
+  border: 1px solid #dbe3ec;
+  border-radius: 5px;
+
+  background: #f8fafc;
+
+  color: #64748b;
+
+  font-size: 6px;
+}
+
+.find-scheme-search-summary strong {
+  color: #17375e;
+}
+
+/* =========================================================
+   SEARCH RESULTS
+   ========================================================= */
+
+.find-scheme-results {
+  margin-top: 5px;
+
+  min-height: 0;
+
+  overflow-y: auto;
+}
+
+.find-scheme-results h4 {
+  margin: 0 0 4px;
+
+  color: #17375e;
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.find-scheme-results-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.find-scheme-result-item {
+  display: grid;
+
+  grid-template-columns: 18px minmax(0, 1fr);
+
+  column-gap: 5px;
+  row-gap: 4px;
+
+  padding: 5px 6px;
+
+  border: 1px solid #dce5ef;
+  border-radius: 5px;
+
+  background: #ffffff;
+}
+
+.find-scheme-result-icon {
+  width: 18px;
+  height: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  grid-column: 1;
+  grid-row: 1;
+
+  border-radius: 50%;
+
+  background: #e8f5ec;
+  color: #198754;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.find-scheme-result-content {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1px;
+
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.find-scheme-result-content strong {
+  color: #17375e;
+
+  font-size: 7px;
+  line-height: 1.2;
+}
+
+.find-scheme-result-content span {
+  color: #64748b;
+  font-size: 6px;
+}
+
+.find-scheme-result-content small {
+  color: #7a8797;
+
+  font-size: 6px;
+  line-height: 1.2;
+}
+
+.find-scheme-result-button {
+  grid-column: 2;
+  grid-row: 2;
+
+  justify-self: start;
+
+  padding: 4px 6px;
+
+  border: none;
+  border-radius: 4px;
+
+  background: #eef5ff;
+  color: #1261b8;
+
+  font-size: 6px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.find-scheme-result-button:hover {
+  background: #1261b8;
+  color: #ffffff;
+}
+
+.find-scheme-no-results {
+  margin: 0;
+
+  padding: 7px;
+
+  border-radius: 5px;
+
+  background: #f8fafc;
+
+  color: #64748b;
+
+  font-size: 7px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .find-scheme-card {
+    height: 210px;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      140px;
+  }
+
+  .find-scheme-illustration__image {
+    width: 100px;
+    height: 120px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .find-scheme-card {
+    height: auto;
+    min-height: 210px;
+
+    grid-template-columns: 1fr;
+
+    padding: 9px;
+  }
+
+  .find-scheme-illustration {
+    height: 125px;
+    min-height: 125px;
+  }
+
+  .find-scheme-illustration__image {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+  .find-scheme-illustration {
+    display: none;
+  }
+
+  .find-scheme-field select {
+    height: 29px;
+  }
+
+  .find-scheme-button {
+    height: 30px;
+  }
+
+  .find-scheme-search-summary {
+    flex-direction: column;
+    gap: 3px;
+  }
+}
+/* =========================================================
+   PHASE 31.11 — HEADING + WORKER ILLUSTRATION
+   ========================================================= */
+
+#find-scheme > .dashboard-section__header {
+  width: 100%;
+  margin: 0 0 6px;
+}
+
+#find-scheme > .dashboard-section__header .dashboard-section__title {
+  margin: 0;
+
+  color: #17375e;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+#find-scheme > .dashboard-section__header .dashboard-section__subtitle {
+  margin: 2px 0 0;
+
+  color: #64748b;
+
+  font-size: 7px;
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+/* =========================================================
+   WORKER ILLUSTRATION
+   ========================================================= */
+
+.find-scheme-illustration {
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px;
+
+  box-sizing: border-box;
+
+  border-radius: 7px;
+
+  background: #f4f8fd;
+  border: 1px solid #dfe7ef;
+
+  overflow: hidden;
+}
+
+.find-scheme-illustration__image {
+  width: 104px;
+  height: 122px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 4px;
+
+  border-radius: 9px;
+
+  background: #eaf3ff;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 4px 10px rgba(11, 99, 206, 0.06);
+}
+
+.find-scheme-illustration__image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.find-scheme-illustration span {
+  color: #17375e;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  text-align: center;
+}
+/* =========================================================
+   PHASE 31.11 — THREE DROPDOWNS REFERENCE MATCH
+   ========================================================= */
+
+.find-scheme-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.find-scheme-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.find-scheme-field label {
+  color: #475569;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  line-height: 1.1;
+}
+
+.find-scheme-field select {
+  width: 100%;
+  height: 27px;
+
+  padding: 0 7px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d8e2ec;
+  border-radius: 5px;
+
+  background: #ffffff;
+  color: #17375e;
+
+  font-family: inherit;
+
+  font-size: 7px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  outline: none;
+  cursor: pointer;
+
+  appearance: auto;
+}
+
+.find-scheme-field select:hover {
+  border-color: #b9cde0;
+}
+
+.find-scheme-field select:focus {
+  border-color: #0b63ce;
+
+  box-shadow:
+    0 0 0 2px rgba(11, 99, 206, 0.08);
+}
+/* =========================================================
+   PHASE 31.11 — FIND SCHEMES BUTTON REFERENCE MATCH
+   ========================================================= */
+
+.find-scheme-button {
+  width: 100%;
+  height: 29px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  margin-top: 2px;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  border: none;
+  border-radius: 5px;
+
+  background: #0b63ce;
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.find-scheme-button:hover {
+  background: #084f9f;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 3px 8px rgba(11, 99, 206, 0.16);
+}
+
+.find-scheme-button:active {
+  transform: translateY(0);
+}
+
+.find-scheme-button:focus-visible {
+  outline: 2px solid rgba(11, 99, 206, 0.25);
+  outline-offset: 2px;
+}
+
+.find-scheme-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+.find-scheme-button span {
+  font-size: 11px;
+  line-height: 1;
+}
+/* =========================================================
+   PHASE 31.11 — RESULTS + AVAILABILITY TEXT
+   ========================================================= */
+
+.find-scheme-api-count {
+  margin-top: 3px;
+
+  color: #198754;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  line-height: 1.1;
+}
+
+.find-scheme-search-summary {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 4px 7px;
+
+  margin-top: 4px;
+  padding: 5px 6px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dbe3ec;
+  border-radius: 5px;
+
+  background: #f8fafc;
+
+  color: #64748b;
+
+  font-size: 6px;
+  line-height: 1.2;
+}
+
+.find-scheme-search-summary strong {
+  color: #17375e;
+  font-weight: 800;
+}
+
+.find-scheme-results {
+  width: 100%;
+  min-height: 0;
+
+  margin-top: 5px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.find-scheme-results h4 {
+  margin: 0 0 4px;
+
+  color: #17375e;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+.find-scheme-results-list {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.find-scheme-result-item {
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+
+  column-gap: 5px;
+  row-gap: 4px;
+
+  padding: 5px 6px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dce5ef;
+  border-radius: 5px;
+
+  background: #ffffff;
+}
+
+.find-scheme-result-content {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1px;
+}
+
+.find-scheme-result-content strong {
+  color: #17375e;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.find-scheme-result-content span {
+  color: #64748b;
+
+  font-size: 6px;
+
+  line-height: 1.15;
+}
+
+.find-scheme-result-content small {
+  color: #7a8797;
+
+  font-size: 6px;
+
+  line-height: 1.2;
+}
+
+.find-scheme-results
+  .api-empty-state {
+  width: 100%;
+
+  min-height: 30px;
+
+  margin: 0;
+  padding: 6px;
+
+  box-sizing: border-box;
+
+  border-radius: 5px;
+
+  font-size: 7px;
+  line-height: 1.2;
+}
+
+.find-scheme-no-results {
+  margin: 0;
+
+  padding: 7px;
+
+  border-radius: 5px;
+
+  background: #f8fafc;
+
+  color: #64748b;
+
+  font-size: 7px;
+
+  line-height: 1.2;
+}
+/* =========================================================
+   PHASE 31.11 — INTERNAL SPACING + ALIGNMENT
+   ========================================================= */
+
+.find-scheme-card {
+  align-items: stretch;
+}
+
+.find-scheme-content {
+  min-width: 0;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+
+  overflow: hidden;
+}
+
+.find-scheme-intro {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 6px;
+}
+
+.find-scheme-intro__icon {
+  flex: 0 0 32px;
+}
+
+.find-scheme-form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.find-scheme-illustration {
+  align-self: stretch;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px;
+
+  box-sizing: border-box;
+}
+
+.find-scheme-illustration__image {
+  flex: 0 0 auto;
+
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.find-scheme-illustration span {
+  margin: 0;
+
+  text-align: center;
+}
+/* =========================================================
+   PHASE 31.11 — SCHEME DETAILS MODAL
+   ========================================================= */
+
+.find-scheme-details-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  padding: 16px;
+
+  box-sizing: border-box;
+
+  background: rgba(15, 23, 42, 0.55);
+}
+
+.find-scheme-details-modal {
+  width: min(420px, calc(100vw - 32px));
+  max-width: 420px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe3ec;
+  border-radius: 8px;
+
+  box-shadow:
+    0 18px 45px rgba(15, 23, 42, 0.28);
+
+  overflow: hidden;
+}
+
+.find-scheme-details-header {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  padding: 12px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.find-scheme-details-header h3 {
+  margin: 0;
+
+  color: #17375e;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+.find-scheme-details-header p {
+  margin: 3px 0 0;
+
+  color: #64748b;
+
+  font-size: 7px;
+
+  line-height: 1.2;
+}
+
+.find-scheme-details-close {
+  width: 24px;
+  height: 24px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 5px;
+
+  background: #f1f5f9;
+  color: #475569;
+
+  font-size: 15px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.find-scheme-details-close:hover {
+  background: #e2e8f0;
+}
+
+.find-scheme-details-content {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  padding: 12px;
+}
+
+.find-scheme-detail-item {
+  padding: 8px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+
+  background: #f8fafc;
+}
+
+.find-scheme-detail-item span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #64748b;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.find-scheme-detail-item strong {
+  display: block;
+
+  color: #17375e;
+
+  font-size: 8px;
+  line-height: 1.35;
+
+  overflow-wrap: anywhere;
+}
+
+.find-scheme-detail-note {
+  padding: 7px 8px;
+
+  border-radius: 5px;
+
+  background: #eef5ff;
+
+  color: #52677f;
+
+  font-size: 7px;
+
+  line-height: 1.3;
+}
+/* =========================================================
+   PHASE 31.11 — SEARCH RESULT VISIBILITY FIX
+   ========================================================= */
+
+.find-scheme-results {
+  width: 100%;
+  min-height: 0;
+
+  margin-top: 5px;
+
+  overflow: visible;
+}
+
+.find-scheme-result-item {
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+}
+/* =========================================================
+   PHASE 31.11 — SEARCH RESULT VISIBILITY
+   ========================================================= */
+
+.find-scheme-card--results {
+  height: auto;
+  min-height: 210px;
+}
+
+.find-scheme-card--results .find-scheme-content {
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+}
+
+.find-scheme-card--results .find-scheme-results {
+  width: 100%;
+  max-height: 120px;
+
+  margin-top: 5px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.find-scheme-card--results .find-scheme-results-list {
+  padding-bottom: 2px;
+}
+
+.find-scheme-card--results .find-scheme-result-item {
+  min-height: 44px;
+}
+
+.find-scheme-card--results
+  .find-scheme-search-summary {
+  margin-top: 4px;
+}

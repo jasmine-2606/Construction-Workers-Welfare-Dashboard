@@ -1,0 +1,386 @@
+/* =========================================================
+   PHASE 31.2 — EXACT REFERENCE SIDEBAR
+   ========================================================= */
+
+.dashboard-sidebar {
+  width: 145px;
+  min-width: 145px;
+  height: 100%;
+  min-height: 620px;
+
+  display: flex;
+  flex-direction: column;
+
+  flex-shrink: 0;
+  box-sizing: border-box;
+
+  padding: 14px 8px 10px;
+
+  background: linear-gradient(
+    180deg,
+    #082f5c 0%,
+    #07345f 55%,
+    #0a3157 100%
+  );
+
+  color: #ffffff;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.dashboard-sidebar__menu {
+  width: 100%;
+}
+
+.dashboard-sidebar__heading {
+  margin: 0 6px 9px;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 8px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.dashboard-sidebar__nav {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+/* =========================================================
+   MENU ITEM
+   ========================================================= */
+
+.dashboard-sidebar__item {
+  width: 100%;
+  min-height: 31px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 6px 7px;
+
+  box-sizing: border-box;
+
+  border: none;
+  outline: none;
+
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font: inherit;
+  font-size: 9px;
+  font-weight: 600;
+
+  line-height: 1.2;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
+}
+
+.dashboard-sidebar__item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.dashboard-sidebar__item--active {
+  background: #1268d4;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.16);
+}
+
+.dashboard-sidebar__item--active:hover {
+  background: #1268d4;
+  color: #ffffff;
+}
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.dashboard-sidebar__icon {
+  width: 17px;
+  min-width: 17px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+  line-height: 1;
+}
+
+.dashboard-sidebar__label {
+  min-width: 0;
+  flex: 1;
+
+  line-height: 1.25;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   SUPPORT MESSAGE
+   ========================================================= */
+
+.dashboard-sidebar__message {
+  position: relative;
+
+  width: 100%;
+
+  margin-top: auto;
+  margin-bottom: 9px;
+
+  padding: 10px 7px 13px;
+
+  box-sizing: border-box;
+
+  background: transparent;
+  border: none;
+
+  text-align: left;
+}
+
+.dashboard-sidebar__message::after {
+  content: "";
+
+  position: absolute;
+
+  left: 7px;
+  bottom: 0;
+
+  width: 34px;
+  height: 2px;
+
+  background: #f4c542;
+
+  border-radius: 999px;
+
+  transform: rotate(-4deg);
+}
+
+.dashboard-sidebar__message-title {
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 10px;
+  font-weight: 500;
+
+  line-height: 1.45;
+
+  font-style: italic;
+}
+
+.dashboard-sidebar__message-title + .dashboard-sidebar__message-title {
+  margin-top: 0;
+}
+
+/* =========================================================
+   SIDEBAR ILLUSTRATION
+   ========================================================= */
+
+.dashboard-sidebar__illustration {
+  width: 100%;
+
+  margin-top: 0;
+
+  padding: 0 2px 4px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+/* =========================================================
+   ILLUSTRATION ART
+   ========================================================= */
+
+.dashboard-sidebar__illustration-art {
+  width: 100%;
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 0;
+
+  background: transparent;
+}
+
+.dashboard-sidebar__illustration-art img {
+  width: 118px;
+  height: 82px;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+/* =========================================================
+   ILLUSTRATION TEXT
+   ========================================================= */
+
+.dashboard-sidebar__illustration-title {
+  margin-top: 4px;
+
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+.dashboard-sidebar__illustration-text {
+  margin-top: 2px;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 8px;
+
+  line-height: 1.25;
+}
+
+/* =========================================================
+   SECONDARY TEXT FROM SIDEBAR JSX
+   ========================================================= */
+
+.dashboard-sidebar
+  > .dashboard-sidebar__illustration-title {
+  margin-top: 4px;
+
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+.dashboard-sidebar
+  > .dashboard-sidebar__illustration-text {
+  margin-top: 2px;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 8px;
+
+  text-align: center;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .dashboard-sidebar {
+    width: 135px;
+    min-width: 135px;
+
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  .dashboard-sidebar__item {
+    min-height: 30px;
+    padding: 6px;
+
+    font-size: 8px;
+  }
+
+  .dashboard-sidebar__icon {
+    width: 16px;
+    min-width: 16px;
+    font-size: 11px;
+  }
+
+  .dashboard-sidebar__label {
+    font-size: 8px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .dashboard-sidebar {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+
+    padding: 10px;
+  }
+
+  .dashboard-sidebar__nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 5px;
+  }
+
+  .dashboard-sidebar__item {
+    min-height: 32px;
+    padding: 6px 7px;
+
+    font-size: 9px;
+  }
+
+  .dashboard-sidebar__label {
+    font-size: 9px;
+  }
+
+  .dashboard-sidebar__message {
+    margin-top: 12px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .dashboard-sidebar__nav {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-sidebar__item {
+    min-height: 31px;
+  }
+}

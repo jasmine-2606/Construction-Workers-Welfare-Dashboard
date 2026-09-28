@@ -1,0 +1,18 @@
+.demographics-chart {
+  width: 100%;
+  min-height: 280px;
+}
+
+.demographics-chart .recharts-responsive-container {
+  min-height: 280px;
+}
+
+@media (max-width: 768px) {
+  .demographics-chart {
+    min-height: 240px;
+  }
+
+  .demographics-chart .recharts-responsive-container {
+    min-height: 240px;
+  }
+}

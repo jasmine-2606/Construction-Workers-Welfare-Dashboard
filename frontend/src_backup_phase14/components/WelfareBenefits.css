@@ -1,0 +1,86 @@
+.welfare-benefits {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-lg);
+}
+
+.welfare-benefit {
+  min-height: 150px;
+  padding: var(--space-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.welfare-benefit:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.welfare-benefit__icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-small);
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+}
+
+.welfare-benefit__content h3 {
+  margin: var(--space-md) 0 0;
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.welfare-benefit__content p {
+  margin: var(--space-xs) 0 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* Orange */
+
+.welfare-benefit--orange .welfare-benefit__icon {
+  background: var(--color-orange-light);
+  color: var(--color-orange);
+}
+
+/* Red */
+
+.welfare-benefit--red .welfare-benefit__icon {
+  background: var(--color-red-light);
+  color: var(--color-red);
+}
+
+/* Pink */
+
+.welfare-benefit--pink .welfare-benefit__icon {
+  background: var(--color-pink-light);
+  color: var(--color-pink);
+}
+
+/* Blue */
+
+.welfare-benefit--blue .welfare-benefit__icon {
+  background: var(--color-blue-light);
+  color: var(--color-blue);
+}
+
+@media (max-width: 1200px) {
+  .welfare-benefits {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .welfare-benefits {
+    grid-template-columns: 1fr;
+  }
+}
